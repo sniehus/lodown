@@ -22,3 +22,21 @@ function each(collection, action) {
     }
 }
 module.exports.each = each;
+
+
+/**
+ * 
+ * 
+ * 
+ * 
+ */
+ _.indexOf = function(array, value){
+    //iterate through the input array using a for loop
+    for (var i = 0; i < array.length; i++) {
+        //determine if current array value is equal to the input value
+        if (array[i] === value) {
+            return i; 
+        }
+    }
+}
+module.exports.indexOf = indexOf;
