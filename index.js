@@ -373,18 +373,18 @@ return mapped;
  * @returns Function returns an array containing the value each input property for every element in input array.
  */
 
-function pluck(array, prop){
-    let arrayCopy = [];
-    //call map function
-    let result = _.map(array, function(array){
-        if (array.hasOwnProperty(prop)){
-            arrayCopy.push(prop);
-        }
-        
-    })
-    return result;
-
-    }
+function pluck(array, property){
+    let resultArray = [];
+   //call map function
+    let result = _.map(array, function(object){
+        //determine if property exist in input object
+         if (object.hasOwnProperty(property)){
+            resultArray.push(object[property]);
+         }
+        });
+       
+    return resultArray;
+}
     module.exports.pluck = pluck;
 
 /**
